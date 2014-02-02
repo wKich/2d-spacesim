@@ -7,11 +7,11 @@ uniform vec2 qt_BackgroundOffset;
 
 // This content is under the MIT License.
 
-#define iterations 15
+#define iterations 18
 #define formuparam 0.530
 
 #define volsteps 18
-#define stepsize 0.120
+#define stepsize 0.150
 
 #define zoom   0.900
 #define tile   0.850
@@ -35,7 +35,7 @@ void main(void)
         dir.xz*=rot1;
         dir.xy*=rot2;
 
-        vec3 from=vec3(0.,0.,0.);
+        vec3 from=vec3(3.12,2.76,0.);
 
         from.x+=0.001*qt_BackgroundOffset.x;
         from.y+=0.001*qt_BackgroundOffset.y;
@@ -58,7 +58,6 @@ void main(void)
                 float dm=max(0.,darkmatter-a*a*.001); //dark matter
                 a*=a*a*2.; // add contrast
                 if (r>3) fade*=1.-dm; // dark matter, don't render near
-                //v+=vec3(dm,dm*.5,0.);
                 v+=fade;
                 v+=vec3(s,s*s,s*s*s*s)*a*brightness*fade; // coloring based on distance
                 fade*=distfading; // distance fading
