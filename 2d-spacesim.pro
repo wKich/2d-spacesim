@@ -11,12 +11,15 @@ RESOURCES += \
     main.qrc
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    spaceship.h
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    spaceship.cpp
 
 OTHER_FILES += \
     main.frag \
-    main.vert
+    main.vert \
+    bg.frag
