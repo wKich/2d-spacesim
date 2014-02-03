@@ -1,7 +1,11 @@
 #include "spaceship.h"
 
 SpaceShip::SpaceShip(QObject *parent) :
-    QObject(parent)
+    QObject(parent),
+    throttleUp(false),
+    throttleLeft(false),
+    throttleDown(false),
+    throttleRight(false)
 {
 }
 
